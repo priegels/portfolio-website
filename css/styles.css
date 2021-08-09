@@ -1,13 +1,3 @@
-/*
-Colors used
-
-Text Color (white): #fff
-Background Color (gray): #272C33
-Primary  Color (orange): #FDA101
-Secondary Color (pink): #C72384
-Tertiary Color (light orange): #E0B354
-*/
-
 :root {
   --text-color: #fff;
   --text-color-secondary: #000;
