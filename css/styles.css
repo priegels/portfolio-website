@@ -14,8 +14,8 @@
   --keyframe-color-change1__pre: #FFFFFF;
   --keyframe-color-change1__post: #72FFFF;
 
-  --primary-font-size: 16px;
-  --h1-font-size: 32px;
+  --primary-font-size: 18px;
+  --h1-font-size: 40px;
   --h1-font-size-mediaq: 22px;
   --h2-font-size: 24px;
   --h3-font-size: 22px;
@@ -37,6 +37,12 @@
   padding: 20px;
   width: 100%;
   border-bottom:thick var(--tertiary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .page-header__item {
@@ -57,10 +63,8 @@
 
 .profile {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 240px auto 0 auto;
   display: flex;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .profile-text {
@@ -77,69 +81,55 @@
   margin-top: 5px;
 }
 
+#about {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+}
+
 .about-page {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-list {
-  list-style-type: none;
-  display: contents;
+.about-page h1 {
+  margin: 50px;
+  color: var(--text-color-secondary);
 }
 
-@keyframes color-change {
-  0% {
-    fill: var(--keyframe-color-change__pre);
-  }
-  100% {
-    fill: var(--keyframe-color-change__post);
-  }
+.about-info {
+  width: auto;
+  max-width: 320px;
 }
 
-.moon {
-  animation: 6s color-change infinite alternate linear;
+.about-info p {
+  font-size: 30px;
+  margin-bottom: 15px;
 }
-
-.scraper-left-light {
-  animation: 3s color-change infinite alternate linear;
-}
-
-@keyframes color-change1 {
-  0% {
-    fill: var(--keyframe-color-change1__pre);
-  }
-  100% {
-    fill: var(--keyframe-color-change1__post);
-  }
-}
-
-.scraper-medium-light {
-  animation: 9s color-change1 infinite alternate linear;
-}
-
-@keyframes fadein {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.light {
-  animation: 2s fadein infinite alternate linear;
-}
-
-.star {
-  animation: 5s fadein infinite alternate linear;
-}
-
 
 table {
   margin: 0 auto;
 }
 
+#contact {
+  display: flex;
+  justify-content: center;
+}
+
 .contact-page {
   text-align: center;
-  max-width: 700px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.contact-page h1 {
+  margin-left: 500px;
+  font-size: 80px;
 }
 
 .page-footer {
@@ -148,6 +138,8 @@ table {
   flex-direction: column;
   text-align: center;
   margin-bottom: 0;
+  background-color: var(--tertiary-color);
+  color: var(--text-color-secondary);
 }
 
 body {
@@ -224,13 +216,18 @@ body {
   line-height: 1.4;
   /* Sets the line-height to 1.4 */
   color: var(--text-color);
-  padding: 20px;
+  height: 100%;
+}
+
+section {
+  min-height: 100vh;
 }
 
 h1 {
   font-size: var(--h1-font-size);
   font-weight: var(--secondary-font-weight);
   text-decoration: none;
+  margin: 0;
 }
 
 h2 {
@@ -240,7 +237,7 @@ h2 {
 
 h3 {
   font-size: var(--h3-font-size);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--secondary-color);
 }
 
@@ -256,8 +253,8 @@ h3 {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  background-color: var(--accent-color);
+  color: var(--text-color-secondary);
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
@@ -268,14 +265,14 @@ h3 {
 }
 
 .about-button {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  font-weight: var(--secondary-font-weight);
-  margin-top:30px;
-  margin-bottom: 30px;
+  background-color: var(--accent-color);
+  color: var(--text-color-secondary);
+  font-weight: 500;
   display: inline-block;
-
-}
+  height: 45px;
+  width: 150px;
+  border-radius: 6px;
+  }
 
 .button_secondary {
   background-color: var(--tertiary-color);
@@ -308,15 +305,58 @@ button:focus,
   opacity: 0.8;
 }
 
+#technologies {
+  background-color: var(--tertiary-color);
+  text-align: center;
+  color: var(--text-color-secondary);
+}
+
+.technologies h1 {
+  font-size: 70px;
+  padding: 40px;
+}
+
+.technologies-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: auto;
+  justify-content: space-around
+}
+
+.technologies-icons img {
+  margin: 10px;
+  width: 180px;
+  height: 180px;
+}
+
+#projects {
+  background-color: var(--tertiary-color);
+  padding: 0 85px;
+}
+
+#projects h1 {
+  font-size: 70px;
+  padding: 40px;
+  text-align: center;
+  color: var(--text-color-secondary);
+}
+
+.project-list {
+  padding-bottom: 75px;
+}
+
 .project-list__item {
   display: inline-block;
   width: 33%;
+  text-align: center;
 }
 
 @supports (display: grid) {
   .project-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     margin: 0;
   }
@@ -324,37 +364,24 @@ button:focus,
   .project-list__item {
     background-color: var(--primary-color);
     width: auto;
-    min-height: auto;
+    min-height: 310px;
     margin: 0;
-  }
-
-  .project-list__item:last-child {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 750px) and (max-width: 1150px){
   .project-list {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 750px) {
   .project-list {
     grid-template-columns: 1fr;
   }
 }
-@media all and (max-width: 750px) {
-  .project-list {
-    grid-gap: 10px;
-  }
+@media all and (max-width: 1150px) {
   .project-list__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
-  }
-  h1 {
-    font-size: var(--h1-font-size-mediaq);
   }
 }
