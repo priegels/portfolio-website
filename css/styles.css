@@ -32,6 +32,10 @@
   box-sizing: border-box;
 }
 
+.spacer-div {
+  height: 60px;
+}
+
 .page-header {
   display: flex;
   padding: 20px;
@@ -98,6 +102,7 @@
 .about-page h1 {
   margin: 50px;
   color: var(--text-color-secondary);
+  font-size: 70px;
 }
 
 .about-info {
@@ -129,7 +134,7 @@ table {
 
 .contact-page h1 {
   margin-left: 500px;
-  font-size: 80px;
+  font-size: 70px;
 }
 
 .page-footer {
@@ -192,15 +197,7 @@ a.project-list__item-link {
   font-weight: bold;
 }
 
-a.project-list__item-link:visited {
-  color: var(--tertiary-color);
-}
-
-a.project-list__item-link:active {
-  color: var(--text-color);
-}
-
-.project-list__item-link:hover, .project-list__item-link:focus {
+.project-list__item-link:hover {
   color: var(--tertiary-color);
 }
 
@@ -262,6 +259,7 @@ h3 {
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
+  margin-bottom: 10px;
 }
 
 .about-button {
@@ -351,6 +349,12 @@ button:focus,
   display: inline-block;
   width: 33%;
   text-align: center;
+}
+
+.project-list__item img {
+  width: 351px;
+  height: 200px;
+  margin: 10px;
 }
 
 @supports (display: grid) {
