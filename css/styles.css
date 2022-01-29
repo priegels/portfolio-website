@@ -348,15 +348,16 @@ a.project-list__item-link {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 40%;
+  width: 400px;
+  height: 640px;
   margin: auto;
   justify-content: space-around
 }
 
 .technologies-icons img {
   margin: 10px;
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
 }
 
 /* .neo-attribute {
@@ -394,8 +395,10 @@ a.project-list__item-link {
   .project-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 40px;
     margin: 0;
+    margin-left: 80px;
+    margin-right: 80px;
   }
 
   .project-list__item {
