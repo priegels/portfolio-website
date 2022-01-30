@@ -35,7 +35,6 @@
 /* Page header */
 
 .page-header {
-  display: flex;
   padding: 20px;
   width: 100%;
   border-bottom:thick var(--tertiary-color);
@@ -47,17 +46,9 @@
   z-index: 1;
 }
 
-.page-header__item {
-  flex: 0 1 auto;
-}
-
-.page-header__item:last-child {
-  flex-grow: 1;
-  text-align: right;
-}
-
 .navigation-list {
   list-style-type: none;
+  float: right;
 }
 
 .navigation-list li {
@@ -91,15 +82,12 @@ body {
   line-height: 1.4;
   /* Sets the line-height to 1.4 */
   color: var(--text-color);
+  background-color: var(--primary-color);
   height: 100%;
 }
 
 table {
   margin: 0 auto;
-}
-
-body {
-  background-color: var(--primary-color);
 }
 
 a {
@@ -266,28 +254,6 @@ h3 {
     opacity: 0.8;
   }
 
-/*** CONTACT
-****
-****/
-
-#contact {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-page {
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.contact-page h1 {
-  margin-left: 500px;
-  font-size: 70px;
-}
-
 /*** PROJECTS
 ****
 ****/
@@ -365,15 +331,33 @@ a.project-list__item-link {
   font-weight: var(--primary-font-weight);
 } */
 
-/* CONTACT 
-*
-*/
+/*** CONTACT
+****
+****/
+
+#contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-page {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.contact-page h1 {
+  margin-left: 500px;
+  font-size: 70px;
+}
 
 .button-form {
   border: none;
   font-family: inherit;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  background-color: var(--accent-color);
+  color: var(--text-color-secondary);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -415,11 +399,40 @@ a.project-list__item-link {
   .project-list {
     grid-template-columns: 1fr 1fr;
   }
+
+  .contact-page h1 {
+    margin-left: 250px;
+    font-size: 70px;
+  }
 }
 @media all and (max-width: 750px) {
+  .about-page {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #about h1 {
+    padding-top: 50px;
+  }
+
   .project-list {
     grid-template-columns: 1fr;
   }
+ 
+  .contact-page {
+    flex-direction: column;
+  }
+  
+  .contact-page h1 {
+    margin-left: auto;
+    font-size: 70px;
+    padding-top: 95px;
+  }
+
+  .contact-page h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }  
 }
 @media all and (max-width: 1150px) {
   .project-list__item:last-child {
