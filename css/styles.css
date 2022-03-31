@@ -282,7 +282,13 @@ h3 {
 
 .project-list__item img {
   width: 351px;
-  height: 200px;
+  height: 230px;
+  margin: 10px;
+}
+
+.work-mobile {
+  width: 150px !important;
+  height: 300px !important;
   margin: 10px;
 }
 
@@ -338,6 +344,7 @@ a.project-list__item-link {
 #contact {
   display: flex;
   justify-content: center;
+  min-height: 80vh !important;
 }
 
 .contact-page {
@@ -378,7 +385,7 @@ a.project-list__item-link {
 @supports (display: grid) {
   .project-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     margin: 0;
     margin-left: 80px;
@@ -388,6 +395,8 @@ a.project-list__item-link {
   .project-list__item {
     background-color: var(--primary-color);
     width: auto;
+    max-width: 450px;
+    padding: 5px;
     min-height: 310px;
     margin: 0;
   }
@@ -433,6 +442,7 @@ a.project-list__item-link {
     margin-top: 50px;
     margin-bottom: 50px;
   }  
+
 }
 @media all and (max-width: 1150px) {
   .project-list__item:last-child {
