@@ -512,6 +512,7 @@ a.project-list__item-link {
     flex-direction: column;
     align-content: flex-end;
     align-items: flex-end;
+    margin-top: 0;
   }
 
   .menu-toggle {
