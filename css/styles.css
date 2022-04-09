@@ -32,6 +32,10 @@
 ****
 ****/
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Page header */
 
 .page-header {
