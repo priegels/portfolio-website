@@ -46,6 +46,16 @@
   z-index: 1;
 }
 
+.nav-logo {
+  width: 50px;
+  float: left;
+  margin: 10px 0 0 30px;
+}
+
+.nav-logo img {
+  width: 100%;
+}
+
 .navigation-list {
   list-style-type: none;
   float: right;
@@ -66,6 +76,51 @@
 .navigation-list__item--active {
   text-decoration: none;
   font-size: var(--navigation-active-font-size);
+}
+
+.hamburger-div {
+  display: flex;
+  justify-content: right;
+}
+
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3 ease-in-out;
+  display: block;
+}
+
+/* Through animation, changes the 3-bar hamburger to a 2-bar X */
+
+/* Rotate the 1st bar 45 degrees */
+.menu-toggle:focus .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+/* Hide the middle bar */
+.menu-toggle:focus .bar:nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate the 3rd bar -45 deg */
+.menu-toggle:focus .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Body */
@@ -154,7 +209,9 @@ h3 {
 
 .profile__portrait {
   float: left;
-  width: 280px;
+  width: 100%;
+  height: auto;
+  max-width: 280px;
   margin-right: 40px;
   border-radius: 50%;
 }
@@ -281,9 +338,11 @@ h3 {
 }
 
 .project-list__item img {
-  width: 351px;
-  height: 230px;
-  margin: 10px;
+  width: 100%;
+  height: auto;
+  max-width: 351px;
+  max-height: 230px;
+
 }
 
 .work-mobile {
@@ -320,16 +379,20 @@ a.project-list__item-link {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 400px;
-  height: 640px;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 640px;
   margin: auto;
   justify-content: space-around
 }
 
 .technologies-icons img {
   margin: 10px;
-  width: 140px;
-  height: 140px;
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+  max-height: 140px;
 }
 
 /* .neo-attribute {
@@ -385,6 +448,7 @@ a.project-list__item-link {
 @supports (display: grid) {
   .project-list {
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     margin: 0;
@@ -394,10 +458,11 @@ a.project-list__item-link {
 
   .project-list__item {
     background-color: var(--primary-color);
-    width: auto;
+    width: 100%;
+    height: auto;
     max-width: 450px;
-    padding: 5px;
     min-height: 310px;
+    padding: 5px;
     margin: 0;
   }
 }
@@ -405,16 +470,50 @@ a.project-list__item-link {
 /* Media */
 
 @media all and (min-width: 750px) and (max-width: 1150px){
+
   .project-list {
     grid-template-columns: 1fr 1fr;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .contact-page h1 {
     margin-left: 250px;
     font-size: 70px;
   }
+
+  .project-list__item img {
+    width: auto;
+    height: auto;
+    max-width: 351px;
+    max-height: 230px;
+  }
 }
-@media all and (max-width: 750px) {
+
+@media all and (max-width: 1050px){
+  #projects {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .navigation-list {
+    display: none;
+    width: 100%;
+  }
+
+  .navigation-list.show {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
   .about-page {
     flex-direction: column;
     justify-content: flex-start;
@@ -442,8 +541,41 @@ a.project-list__item-link {
     margin-top: 50px;
     margin-bottom: 50px;
   }  
-
 }
+
+@media all and (max-width: 550px) {
+  .technologies-icons img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .profile__portrait {
+    max-width: 220px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .profile-text {
+    text-align: center;
+    margin: auto;
+    line-height: 1.2;
+  }
+
+  #about h1, #projects h1, #technologies h1, #contact h1 {
+    font-size: 50px;
+  }
+
+  .project-list__item img {
+    margin: 0;
+  }
+}
+
 @media all and (max-width: 1150px) {
   .project-list__item:last-child {
     grid-column: auto / auto;
