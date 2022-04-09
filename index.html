@@ -11,9 +11,24 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+
+<!-- NAVBAR -->
+
   <header class="page-header">
     <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list">
+      <div class="nav-logo">
+        <a href="#">
+          <img class="logo" src="img/logo.png" alt="logo" />
+        </a>
+      </div>
+      <div class="hamburger-div">
+        <button class="menu-toggle" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <ul role="menubar" class="navigation-list" id="nav-list">
         <li role="presentation">
           <a href="#home" role="menuitem" class="navigation-list__item navigation-list__item--active">home.</a>
         </li>
@@ -27,8 +42,14 @@
           <a href="#contact" role="menuitem" class="navigation-list__item">contact.</a>
         </li>
       </ul>
+      </div>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="bx bx-grid-alt"></i>
+      </div>
     </nav>
   </header>
+
+  <!-- HOME -->
 
   <section id="home">
     <hr>
@@ -42,37 +63,30 @@
     </div>
   </section>
 
+  <!-- About page; CV TO BE ADDED ! -->
+
   <section id="about">
     <div class="about-page">
         <h1>about.</h1>
       <div class="about-info">
-        <p> Jack of All Trades turned Master of One. <br>
+        <p> Jack of All Trades turning Master of <s>n</s>One. <br>
 
         Rich background fueled by creativity. <br>
         
-        I strive to create elegant, efficient code.</p>
+        I've come around doing lots of different things finally settling in web development.</p>
 
-        <a href="files/cv.pdf" class="about-button" download="">download CV.</a>
+        <a href="files/cv.pdf" class="about-button" download="">check out CV.</a>
       </div>
     </div>
   </section>
+
+  <!-- Projects -->
 
   <section id="projects">
     <div class="spacer-div"></div>
     <h1>projects.</h1>
     <div class="project-list">
-      <div class="project-list__item">
-        <h2>Pokédex</h2>
-          <img class="work" src="img/pokedex.png">
-        <p>
-          A web application showing data from an external API. Built with HTML, CSS and JavaScript/jQuery.</p>
-        <a href="https://priegels.github.io/pokedex-app/" target="_blank" class="project-list__item-link">
-          <button>Demo</button>
-        </a>
-        <a href="https://github.com/priegels/pokedex-app" target="_blank" class="project-list__item-link">
-          <button>GitHub</button>
-        </a>
-      </div>
+
 
       <div class="project-list__item">
         <h2>K-Flix</h2>
@@ -130,12 +144,26 @@
         </a>
       </div>
 
+      <div class="project-list__item">
+        <h2>Pokédex</h2>
+          <img class="work" src="img/pokedex.png">
+        <p>
+          A web application showing data from an external API. Built with HTML, CSS and JavaScript/jQuery.</p>
+        <a href="https://priegels.github.io/pokedex-app/" target="_blank" class="project-list__item-link">
+          <button>Demo</button>
+        </a>
+        <a href="https://github.com/priegels/pokedex-app" target="_blank" class="project-list__item-link">
+          <button>GitHub</button>
+        </a>
+      </div>
       
   </section>
 
+  <!-- Technologies -->
+
   <section id="technologies">
     <div class="technologies">
-      <h1>technologies.</h1>
+      <h1>tech.</h1>
     </div>
     <div class="technologies-icons">
       <img src="img/html.png" class="technologies-icons-html" alt="This is an icon of HTML">
@@ -147,6 +175,8 @@
       <img src="img/react.png" class="technologies-icons-react" alt="This is an icon of React">
     </div>
   </section>
+
+  <!-- Contact Info -->
 
   <section id="contact">
     <div class="contact-page">
@@ -165,9 +195,10 @@
     </div>
   </section>
 
+  <!-- Footer -->
+
   <footer class="page-footer">
     <p> Find me on </p>
-    <!-- at some point i will create accounts on these socials -->
       <div class="social-media">
         <a href="https://www.github.com/priegels" target="_blank"><img src="img/github.svg" alt="Github logo"></a>
         <a href="https://www.twitter.com" target="_blank"><img src="img/twitter.svg" alt="Twitter logo"></a>
@@ -175,6 +206,14 @@
       </div>
   </footer>
 
+  <!-- Scroll up button -->
+  <a href="#" class="scrollup" id="scroll-up" aria-label="scroll-up button">
+    <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+  </a>
+  <!-- JavaScript -->
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
