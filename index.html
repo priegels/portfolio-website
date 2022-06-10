@@ -142,6 +142,57 @@
         <a href="https://github.com/priegels/KFlix-Angular-Client" target="_blank" class="project-list__item-link">
           <button>GitHub</button>
         </a>
+        <a href="#openModal">
+          <button>More Info</button>
+        </a>
+        <div id="openModal" class="modalDialog">
+          <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>K-Flix-Angular</h2>
+            <h5>Overview</h5>
+              <p>K-Flix is a movie database web application, developed using the MEAN stack. After registering, 
+                users gain access to information about movies, directors, and genres. Users may edit their profile 
+                and create a list of favorite movies. </p>
+              <img src="img/kflix-start.png" alt="Start Screen of K-Flix-Angular">
+            <h5>Purpose & Context</h5>
+              <p>The goal of this project was to learn more about Angular as a framework and the use of TypeScript. 
+                Additionally, I wanted to implement functionality unique to Angular. </p>
+            <h5>Objective</h5>
+              <p>My aim was to have a functioning full-stack web application that showcases my ability to use the 
+                MEAN tech stack. For this reason I built the complete server-side and client-side for K-Flix 
+                from scratch.</p>
+            <h4>Approach</h4>
+            <h5>Server-Side</h5>
+              <img src="img/postman.png" class="modal-pic" alt="Screen of Postman for RESTful API development">
+              <p>Using Node.js and Express, I first developed a RESTful API interacting with MongoDB, a non-relational
+                database. The API is accessible through frequently used HTTP methods GET, PUT, POST and DELETE. The classic
+                CRUD methods allow retrieving data from and storing data in the database. Movie information is provided in 
+                JSON format.
+                Basic HTTP authentication and JWT authentication allow for user authentication and authorization. 
+                For testing purposes, Postman was used.
+              </p>
+            <h5>Client-Side</h5>
+              <p>With the finished API, it served as the foundation for the coming client-side application. 
+                I started building the welcome page that allows users to register or log in. Since this project is a 
+                one page application, the user gets taken to the movie view right after logging in. There are no 
+                other tabs or reloading of another page. There are several interface views including views 
+                specifically for movie, genre and director information. The users get to have an own profile view 
+                where they can edit their information or delete their profile. They also have a list of favorite 
+                movies which they can add movie to or delete movies from. </p>
+              <img src="img/k-flix-angular.png" class="modal-pic" alt="Profile view of the app">
+            <h5>Challenges</h5>
+              <p>As I wanted to create my own API, that was a major challenge because at that point I had not worked 
+                with anything backend related. So I had to quickly become familiar with using the terminal. 
+                I also learned how to use different frameworks in React and Angular and created two client sides with 
+                the same backend API. Learning a new framework is never easy, but as designing the frontend is fun, 
+                it was great to have a lot of possibilities opened up as well. 
+                At one point I had to change devices and had not backed up my API, so I had to rebuild the whole thing. 
+                </p>
+            <h5>Duration</h5>
+              <p>The whole project took me about two months as I had to familiarize myself with loads of different 
+                new technologies while also having to rebuild the API at one point. </p>
+          </div>
+        </div>
       </div>
 
       <div class="project-list__item">
